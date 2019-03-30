@@ -1,0 +1,23 @@
+site_name: test
+
+extra_css:
+  - test.css
+
+pages:
+  - Comments: comments.md
+  - Common: common.md
+  - Contours: contours.md
+  - Keynodes: keynodes.md
+  - Level 1: level_1.md
+  - Level 2: level_2.md
+  - SCP: scp.md
+  - Test 1: test_1.md
+
+theme: material
+
+markdown_extensions:
+  - markdown_include.include
+  - admonition
+  - codehilite
+  - pymdownx.details
+  - pymdownx.superfences
