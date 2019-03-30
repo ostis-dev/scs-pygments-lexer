@@ -54,7 +54,7 @@ class SCsLexer(RegexLexer):
         ],
         'root': [
             (r'(\[\*)|(\*\])', token.String.Delimiter, 'root'),
-            ('"', token.String.Double, 'url'),
+            ('"', token.String.Other, 'url'),
             ('\[', token.String, 'content'),
             include('connectors'),
             include('punctuation'),
@@ -75,8 +75,8 @@ class SCsLexer(RegexLexer):
             ('\]', token.String, '#pop'),
         ],
         'url': [
-            ('[^"]+', token.String.Double),
-            ('"', token.String.Double, '#pop'),
+            ('[^"]+', token.String.Other),
+            ('"', token.String.Other, '#pop'),
         ],
     }
 
